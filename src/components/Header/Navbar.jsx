@@ -1,6 +1,6 @@
 
 import logo from '../../../public/logo.jpg'; 
-import { FaHeart, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaHeart, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa';
 
 export default function Navbar() {
   return (
@@ -20,15 +20,20 @@ export default function Navbar() {
           <img src={logo} alt="Logo" className="h-10" />
           <h1 className="text-xl font-bold ">Gadget Shop BD</h1>
         </div>
+{/* Search Bar */}
+<div className="w-full md:w-1/2">
+  <div className="relative">
+    <input
+      type="text"
+      placeholder="Search your keyword..."
+      className="w-full pl-10 pr-4 py-2 rounded bg-gray-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+    />
+    <span className="absolute bg-green-500 text-white right-3 top-1/2 transform -translate-y-1/2 py-3 px-5 ">
+      <FaSearch/>
+    </span>
+  </div>
+</div>
 
-        {/* Search Bar */}
-        <div className="w-full md:w-1/2">
-          <input
-            type="text"
-            placeholder="Search your keyword..."
-            className="w-full border bg-white text-black  rounded px-4 py-2 focus:outline-none"
-          />
-        </div>
 
         {/* Icons */}
         <div className="flex gap-4 text-gray-200 text-xl">
