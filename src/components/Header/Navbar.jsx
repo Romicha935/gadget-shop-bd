@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import logo from '../../../public/logo.jpg'; 
 import { FaHeart, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa';
 
@@ -28,11 +29,15 @@ export default function Navbar() {
       placeholder="Search your keyword..."
       className="w-full pl-10 pr-4 py-2 rounded bg-gray-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"
     />
-    <span className="absolute bg-green-500 text-white right-3 top-1/2 transform -translate-y-1/2 py-3 px-5 ">
+    <span className="absolute bg-green-500 text-white right-0 top-1/2 transform -translate-y-1/2 py-3 px-5 cursor-pointer">
       <FaSearch/>
     </span>
   </div>
 </div>
+  {/* System Builder Button */}
+  <button className="text-yellow-400 border-2 border-green-500 px-4 py-2 rounded  transition">
+    SYSTEM BUILDER
+  </button>
 
 
         {/* Icons */}
@@ -46,15 +51,19 @@ export default function Navbar() {
       {/* Category Menu Bar */}
       <nav className="bg-black text-white px-4 py-2 text-sm">
         <ul className="flex flex-wrap gap-6 justify-center">
-          <li><a href="#" className="hover:text-green-400">Laptop</a></li>
-          <li><a href="#" className="hover:text-green-400">Desktop and Server</a></li>
-          <li><a href="#" className="hover:text-green-400">Gaming</a></li>
-          <li><a href="#" className="hover:text-green-400">Monitor</a></li>
-          <li><a href="#" className="hover:text-green-400">Printer</a></li>
-          <li><a href="#" className="hover:text-green-400">Camera</a></li>
-          <li><a href="#" className="hover:text-green-400">Accessories</a></li>
-          <li><a href="#" className="hover:text-green-400">Software</a></li>
-          <li><a href="#" className="hover:text-green-400">Store</a></li>
+         <li><Link to="/laptop" className="hover:text-green-400">Laptop</Link></li>
+    <li><Link to="/desktop" className="hover:text-green-400">Desktop and Server</Link></li>
+    <li><Link to="/gaming" className="hover:text-green-400">Gaming</Link></li>
+    <li><Link to="/monitor" className="hover:text-green-400">Monitor</Link></li>
+    <li><Link to="/printer" className="hover:text-green-400">Printer</Link></li>
+    <li><Link to="/camera" className="hover:text-green-400">Camera</Link></li>
+    <li><Link to="/security-system" className="hover:text-green-400">Security System</Link></li>
+    <li><Link to="/network" className="hover:text-green-400">Network</Link></li>
+    <li><Link to="/sound-system" className="hover:text-green-400">Sound System</Link></li>
+    <li><Link to="/office-items" className="hover:text-green-400">Office Items</Link></li>
+    <li><Link to="/accessories" className="hover:text-green-400">Accessories</Link></li>
+    <li><Link to="/software" className="hover:text-green-400">Software</Link></li>
+    <li><Link to="/store" className="hover:text-green-400">Store</Link></li>
         </ul>
       </nav>
     </div>
